@@ -22,9 +22,9 @@
 
 <br />
 <div align="center">
-  <!-- <a href="https://github.com/NovaVoidHowl/CVR-Community-Unity-Package-Manager">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
+  <a href="https://github.com/NovaVoidHowl/CVR-Community-Unity-Package-Manager">
+    <img src="app-icon.png" alt="Logo" width="80" height="80">
+  </a>
 
 <h3 align="center">CVR Community Unity Package Manager</h3>
 
