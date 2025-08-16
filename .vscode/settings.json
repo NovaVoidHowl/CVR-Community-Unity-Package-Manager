@@ -1,0 +1,27 @@
+{
+  "cSpell.words": [
+    "ALCOM",
+    "Chillout",
+    "dotenv",
+    "ehthumbs",
+    "frontmatter",
+    "jspm",
+    "libgit",
+    "mdformat",
+    "pids",
+    "reqwest",
+    "rustc",
+    "rustup",
+    "serde",
+    "Tauri",
+    "textmeshpro",
+    "tlsv"
+  ],
+  "colorize.hide_current_line_decorations": false,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.rulers": [
+    120
+  ],
+  "editor.tabSize": 2
+}

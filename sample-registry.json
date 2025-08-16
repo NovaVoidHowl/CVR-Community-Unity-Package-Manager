@@ -1,0 +1,86 @@
+{
+  "description": "A test registry for CVR Unity Package Manager development with new versioning format",
+  "name": "CVR Community Test Registry",
+  "packages": [
+    {
+      "author": "CVR Community",
+      "category": "Avatar",
+      "description": "Tools for creating and managing CVR avatars",
+      "display_name": "CVR Avatar Tools",
+      "git_url": "https://github.com/example/cvr-avatar-tools.git",
+      "keywords": [
+        "cvr",
+        "avatar",
+        "tools"
+      ],
+      "license": "MIT",
+      "name": "com.cvr.avatar-tools",
+      "versions": [
+        {
+          "dependencies": {},
+          "git_tag": "v1.0.0",
+          "is_prerelease": false,
+          "unity_version": "2021.3",
+          "version": "1.0.0"
+        },
+        {
+          "dependencies": {
+            "com.unity.textmeshpro": "3.0.6"
+          },
+          "git_tag": "v1.1.0",
+          "is_prerelease": false,
+          "unity_version": "2021.3",
+          "version": "1.1.0"
+        },
+        {
+          "dependencies": {
+            "com.unity.textmeshpro": "3.0.6"
+          },
+          "git_tag": "v2.0.0",
+          "is_prerelease": false,
+          "unity_version": "2022.3",
+          "version": "2.0.0"
+        },
+        {
+          "dependencies": {
+            "com.unity.textmeshpro": "3.0.6"
+          },
+          "git_tag": "v2.1.0-beta",
+          "is_prerelease": true,
+          "unity_version": "2022.3",
+          "version": "2.1.0-beta"
+        }
+      ]
+    },
+    {
+      "author": "World Team",
+      "category": "World",
+      "description": "Essential tools for CVR world creation",
+      "display_name": "CVR World Toolkit",
+      "git_url": "https://github.com/example/cvr-world-toolkit.git",
+      "keywords": [
+        "cvr",
+        "world",
+        "creation"
+      ],
+      "license": "Apache-2.0",
+      "name": "com.cvr.world-toolkit",
+      "versions": [
+        {
+          "dependencies": {},
+          "git_tag": "v1.0.0",
+          "is_prerelease": false,
+          "unity_version": "2021.3",
+          "version": "1.0.0"
+        },
+        {
+          "dependencies": {},
+          "git_tag": "v1.5.2",
+          "is_prerelease": false,
+          "unity_version": "2021.3",
+          "version": "1.5.2"
+        }
+      ]
+    }
+  ]
+}

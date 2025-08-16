@@ -1,0 +1,16 @@
+# Default state for all rules
+default: true
+
+MD013:
+  # Number of characters
+  line_length: 120
+  tables: false
+
+MD028: false
+
+MD033: false
+
+MD041: false
+
+MD024:
+  siblings_only: true

@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.6.0"
+  },
+  "name": "cvr-unity-package-manager",
+  "private": true,
+  "scripts": {
+    "build": "tauri build",
+    "dev": "tauri dev",
+    "preview": "tauri build --debug"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}

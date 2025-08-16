@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVR Community Unity Package Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <h1>CVR Community Unity Package Manager</h1>
+            <p class="subtitle">Manage Unity packages with ease</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Navigation Tabs -->
+            <nav class="tab-nav">
+                <button class="tab-button active" data-tab="projects">Projects</button>
+                <button class="tab-button" data-tab="packages">Packages</button>
+                <button class="tab-button" data-tab="registries">Registries</button>
+                <button class="tab-button" data-tab="settings">Settings</button>
+            </nav>
+
+            <!-- Projects Tab -->
+            <div id="projects-tab" class="tab-content active">
+                <div class="section">
+                    <h2>Unity Projects</h2>
+                    <div class="project-controls">
+                        <button id="add-project-btn" class="btn btn-primary">Add Project</button>
+                        <select id="project-select" class="project-selector">
+                            <option value="">Select a project...</option>
+                        </select>
+                    </div>
+                    <div id="project-info" class="project-info hidden">
+                        <h3 id="project-name">Project Name</h3>
+                        <p><strong>Path:</strong> <span id="project-path"></span></p>
+                        <p><strong>Unity Version:</strong> <span id="unity-version"></span></p>
+                        <button id="refresh-project-btn" class="btn btn-secondary">Refresh</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packages Tab -->
+            <div id="packages-tab" class="tab-content">
+                <div class="section">
+                    <div class="section-header">
+                        <h2>Package Management</h2>
+                        <div id="current-project-display" class="current-project-info hidden">
+                            <span class="project-label">Current Project:</span>
+                            <span id="current-project-name" class="project-name">None Selected</span>
+                        </div>
+                    </div>
+                    <div class="package-filter">
+                        <select id="package-filter" class="filter-select">
+                            <option value="all">All Packages</option>
+                            <option value="installed">Installed</option>
+                            <option value="available">Available</option>
+                        </select>
+                    </div>
+                    <div id="package-list" class="package-list">
+                        <p class="no-project-message">Please select a project to view packages.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registries Tab -->
+            <div id="registries-tab" class="tab-content">
+                <div class="section">
+                    <h2>Package Registries</h2>
+                    <div class="registry-controls">
+                        <div class="add-registry-form">
+                            <input type="url" id="registry-url" placeholder="Registry URL (e.g., https://raw.githubusercontent.com/user/repo/main/registry.json)" class="form-input">
+                            <button id="add-registry-btn" class="btn btn-primary">Add Registry</button>
+                        </div>
+                    </div>
+                    <div id="registry-list" class="registry-list">
+                        <!-- Registry items will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div id="settings-tab" class="tab-content">
+                <div class="section">
+                    <h2>Settings</h2>
+                    <div class="settings-section">
+                        <h3>Appearance</h3>
+                        <div class="setting-item">
+                            <label for="theme-select">Theme</label>
+                            <select id="theme-select" class="form-input" style="width: auto; margin-top: 0.5rem;">
+                                <option value="dark">Dark</option>
+                                <option value="light">Light</option>
+                                <option value="auto">Follow System</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h3>Application Settings</h3>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="auto-refresh" checked>
+                                Auto-refresh package lists
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="show-prereleases">
+                                Show pre-release packages
+                            </label>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h3>About</h3>
+                        <p>CVR Community Unity Package Manager v0.1.0</p>
+                        <p>A community tool for managing Unity packages for ChilloutVR development.</p>
+                        <p><em>Not affiliated with Alpha Blend Interactive or ChilloutVR.</em></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
