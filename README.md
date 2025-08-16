@@ -290,13 +290,13 @@ Project Link: [https://github.com/NovaVoidHowl/CVR-Community-Unity-Package-Manag
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=plastic
 [contributors-url]: https://github.com/NovaVoidHowl/CVR-Community-Unity-Package-Manager/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=plastic
 [forks-url]: https://github.com/NovaVoidHowl/CVR-Community-Unity-Package-Manager/network/members
-[stars-shield]: https://img.shields.io/github/stars/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=plastic
 [stars-url]: https://github.com/NovaVoidHowl/CVR-Community-Unity-Package-Manager/stargazers
-[issues-shield]: https://img.shields.io/github/issues/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=plastic
 [issues-url]: https://github.com/NovaVoidHowl/CVR-Community-Unity-Package-Manager/issues
-[license-shield]: https://img.shields.io/github/license/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/NovaVoidHowl/CVR-Community-Unity-Package-Manager.svg?style=plastic
 [license-url]: https://github.com/NovaVoidHowl/CVR-Community-Unity-Package-Manager/blob/master/LICENSE
