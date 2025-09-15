@@ -87,7 +87,7 @@ Instead of manually adding packages through Unity's Package Manager with Git URL
 simple, intuitive desktop interface.
 
 > [!note]
-> This is a community-created tool and is not affiliated with ChilloutVR.
+> This application is not created by or affiliated with ChilloutVR or the ChilloutVR team in any way
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
