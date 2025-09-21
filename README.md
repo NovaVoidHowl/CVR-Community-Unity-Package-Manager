@@ -69,6 +69,9 @@
       </ul>
     </li>
     <li><a href="#configuration">Configuration</a></li>
+    <ul>
+      <li><a href="#config-file-locations">Config File Locations</a></li>
+    </ul>
     <li><a href="#development">Development</a></li>
     <li><a href="#current-status">Current Status</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -190,6 +193,10 @@ Configuration is stored in JSON format and includes:
 - Unity project paths
 - User preferences (theme, default options)
 - Package installation history
+
+### Config File Locations
+
+Windows: `%appdata%/cvr-unity-package-manager`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
