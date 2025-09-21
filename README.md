@@ -62,6 +62,7 @@
       <a href="#usage">Usage</a>
       <ul>
         <li><a href="#getting-started-with-the-app">Getting Started with the App</a></li>
+        <li><a href="#how-to-video">How To Video</a></li>
         <li><a href="#key-features">Key Features</a></li>
         <li><a href="#package-registries">Package Registries</a></li>
         <li><a href="#conflict-detection">Conflict Detection</a></li>
@@ -145,6 +146,9 @@ Download the installer from the latest release, and install from that
 2. **Add Registries**: Start by adding package registry URLs in the registries tab
 3. **Add Projects**: Configure your Unity projects in the project info tab
 4. **Manage Packages**: Use the package management tab to install, update, or remove packages
+
+### How To Video 
+[![CVR - CUPM How To](https://img.youtube.com/vi/TIoApgXhzP0/0.jpg)](https://www.youtube.com/watch?v=TIoApgXhzP0)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
