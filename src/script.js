@@ -729,7 +729,7 @@ class PackageManager {
         }
 
         // Determine package status and button text based on conflicts
-        const { buttonText, buttonClass, statusText, statusClass } = this.getPackageStatusWithConflicts(pkg, selectedVersion, conflictInfo);
+        const { buttonText, buttonClass, statusText, statusClass } = this.getPackageStatusWithConflicts(pkg, selectedVersion, conflictInfo, pkg.isFromRegistry);
 
         // Only show action buttons if the package is from a registry
         const actionButtons = pkg.isFromRegistry ? `
@@ -757,7 +757,7 @@ class PackageManager {
         return div;
     }
 
-    getPackageStatusWithConflicts(pkg, selectedVersion, conflictInfo) {
+    getPackageStatusWithConflicts(pkg, selectedVersion, conflictInfo, isFromRegistry = true) {
         if (!conflictInfo) {
             // Not installed - use original logic
             return {
@@ -771,7 +771,17 @@ class PackageManager {
         const { version: installedVersion, type: installType, reference } = conflictInfo;
 
         if (installType === 'git') {
-            // Git-managed package - needs replacement
+            // Git-managed package
+            if (!isFromRegistry) {
+                // For non-registry packages, show simple status without conversion text
+                return {
+                    buttonText: 'Replace Git',
+                    buttonClass: 'btn-warning',
+                    statusText: `Installed (${installedVersion})`,
+                    statusClass: 'text-success'
+                };
+            }
+            // For registry packages, show conversion option
             return {
                 buttonText: 'Replace Git',
                 buttonClass: 'btn-warning',
@@ -779,7 +789,17 @@ class PackageManager {
                 statusClass: 'text-warning'
             };
         } else if (installType === 'registry') {
-            // Registry package - needs replacement
+            // Registry package
+            if (!isFromRegistry) {
+                // For non-registry packages, show simple status
+                return {
+                    buttonText: 'Replace Registry',
+                    buttonClass: 'btn-warning',
+                    statusText: `Installed (${installedVersion})`,
+                    statusClass: 'text-success'
+                };
+            }
+            // For registry packages, show conversion option
             return {
                 buttonText: 'Replace Registry',
                 buttonClass: 'btn-warning',
@@ -792,6 +812,16 @@ class PackageManager {
                 return {
                     buttonText: 'Reinstall',
                     buttonClass: 'btn-secondary',
+                    statusText: `Installed (${installedVersion})`,
+                    statusClass: 'text-success'
+                };
+            }
+
+            if (!isFromRegistry) {
+                // For non-registry packages, show simple status without action text
+                return {
+                    buttonText: 'Upgrade',
+                    buttonClass: 'btn-primary',
                     statusText: `Installed (${installedVersion})`,
                     statusClass: 'text-success'
                 };
