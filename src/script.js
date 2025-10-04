@@ -578,7 +578,8 @@ class PackageManager {
                     category: pkg.category,
                     license: pkg.license,
                     versions: [],
-                    installedVersion: null
+                    installedVersion: null,
+                    isFromRegistry: true
                 });
             }
 
@@ -616,7 +617,8 @@ class PackageManager {
                         unity_version: null,
                         is_prerelease: false
                     }],
-                    installedVersion: installedPkg.version
+                    installedVersion: installedPkg.version,
+                    isFromRegistry: false
                 });
             }
         }
@@ -729,13 +731,8 @@ class PackageManager {
         // Determine package status and button text based on conflicts
         const { buttonText, buttonClass, statusText, statusClass } = this.getPackageStatusWithConflicts(pkg, selectedVersion, conflictInfo);
 
-        div.innerHTML = `
-            <div class="package-info">
-                <h4>${pkg.display_name || pkg.name}</h4>
-                <p>${pkg.description || 'No description available'}</p>
-                <p class="package-status ${statusClass}">${statusText}</p>
-                ${versionDropdown}
-            </div>
+        // Only show action buttons if the package is from a registry
+        const actionButtons = pkg.isFromRegistry ? `
             <div class="package-actions">
                 <button id="action-btn-${pkg.name}" class="btn ${buttonClass}"
                         onclick="packageManager.performPackageAction('${pkg.name}', '${selectedVersion}')">
@@ -745,6 +742,16 @@ class PackageManager {
                     `<button class="btn btn-danger" onclick="packageManager.removePackage('${pkg.name}')">Remove</button>` : ''
                 }
             </div>
+        ` : '';
+
+        div.innerHTML = `
+            <div class="package-info">
+                <h4>${pkg.display_name || pkg.name}</h4>
+                <p>${pkg.description || 'No description available'}</p>
+                <p class="package-status ${statusClass}">${statusText}</p>
+                ${versionDropdown}
+            </div>
+            ${actionButtons}
         `;
 
         return div;
